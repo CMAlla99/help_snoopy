@@ -307,6 +307,10 @@ function update()
 		arToolkitContext.update( arToolkitSource.domElement );
 }
 
+function rotation() {
+	rotation_woodstock = !rotation_woodstock;
+}
+
 
 function animate()
 {
@@ -360,5 +364,6 @@ function init(event){
 	createScene();
 
   }
-  
-  window.addEventListener('load', init, false);
+
+window.addEventListener('touchend', rotation, false);
+window.addEventListener('load', init, false);
